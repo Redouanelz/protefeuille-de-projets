@@ -1,0 +1,26 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="RlzProj.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Rlzcnx" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=RLZ-PC\RLZ;Initial Catalog=RlzProject;Persist Security Info=True;User ID=Login_Admin;Password=Login_Admin</Value>
+    </Setting>
+    <Setting Name="RlzProjectConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\StartConfig\RlzProject.mdf;Integrated Security=True;User Instance=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\StartConfig\RlzProject.mdf;Integrated Security=True;User Instance=True</Value>
+    </Setting>
+    <Setting Name="MdpConfiguration" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ADMIN</Value>
+    </Setting>
+    <Setting Name="SenederEmail" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Protefeuille.Contact@gmail.com</Value>
+    </Setting>
+    <Setting Name="SenderEmailPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">azqswx123</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

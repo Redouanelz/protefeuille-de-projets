@@ -1,0 +1,653 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0A3990CB-6DB6-4288-A5A6-D2AD28F4931F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RlzProj</RootNamespace>
+    <AssemblyName>RlzProj</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\BorderedTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Profile\GestionCompte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profile\GestionCompte.Designer.cs">
+      <DependentUpon>GestionCompte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\MaMessagerie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profile\MaMessagerie.Designer.cs">
+      <DependentUpon>MaMessagerie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raport_FCP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Raport_FCP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raport_FCPx.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Raport_FCPx.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StartConfig\ConfigurationConnexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartConfig\ConfigurationConnexion.Designer.cs">
+      <DependentUpon>ConfigurationConnexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\OvalPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StartConfig\RlzDsFull.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RlzDsFull.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StartConfig\Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartConfig\Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accueille\Acceuille.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accueille\Acceuille.Designer.cs">
+      <DependentUpon>Acceuille.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Authentification\Authentification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authentification\Authentification.Designer.cs">
+      <DependentUpon>Authentification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Creation de projet\BudgetProjet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Creation de projet\BudgetProjet.Designer.cs">
+      <DependentUpon>BudgetProjet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Creation de projet\CreationProjet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Creation de projet\CreationProjet.Designer.cs">
+      <DependentUpon>CreationProjet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Creation de projet\EquipeProjet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Creation de projet\EquipeProjet.Designer.cs">
+      <DependentUpon>EquipeProjet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Creation de projet\FicheProjet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Creation de projet\FicheProjet.Designer.cs">
+      <DependentUpon>FicheProjet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Creation de projet\FinCreationProjet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Creation de projet\FinCreationProjet.Designer.cs">
+      <DependentUpon>FinCreationProjet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Creation de projet\ShowBudgetChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Creation de projet\ShowBudgetChart.Designer.cs">
+      <DependentUpon>ShowBudgetChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Creation de projet\TachesProjet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Creation de projet\TachesProjet.Designer.cs">
+      <DependentUpon>TachesProjet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\MesInfos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profile\MesInfos.Designer.cs">
+      <DependentUpon>MesInfos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\MesTaches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profile\MesTaches.Designer.cs">
+      <DependentUpon>MesTaches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\MyProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profile\MyProfile.Designer.cs">
+      <DependentUpon>MyProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RlzDs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RlzDs.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Tableau de bord\EspaceProjet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tableau de bord\EspaceProjet.Designer.cs">
+      <DependentUpon>EspaceProjet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tableau de bord\EtatProjet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tableau de bord\EtatProjet.Designer.cs">
+      <DependentUpon>EtatProjet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tableau de bord\FicheProjet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tableau de bord\FicheProjet.Designer.cs">
+      <DependentUpon>FicheProjet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tableau de bord\TableauBord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tableau de bord\TableauBord.Designer.cs">
+      <DependentUpon>TableauBord.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Profile\GestionCompte.resx">
+      <DependentUpon>GestionCompte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile\MaMessagerie.resx">
+      <DependentUpon>MaMessagerie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raport_FCP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Raport_FCP.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raport_FCPx.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Raport_FCPx.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartConfig\ConfigurationConnexion.resx">
+      <DependentUpon>ConfigurationConnexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartConfig\Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accueille\Acceuille.resx">
+      <DependentUpon>Acceuille.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Authentification\Authentification.resx">
+      <DependentUpon>Authentification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Authentification\Authentification.ro.resx">
+      <DependentUpon>Authentification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Creation de projet\BudgetProjet.resx">
+      <DependentUpon>BudgetProjet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Creation de projet\CreationProjet.resx">
+      <DependentUpon>CreationProjet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Creation de projet\EquipeProjet.resx">
+      <DependentUpon>EquipeProjet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Creation de projet\FicheProjet.resx">
+      <DependentUpon>FicheProjet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Creation de projet\FinCreationProjet.resx">
+      <DependentUpon>FinCreationProjet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Creation de projet\ShowBudgetChart.resx">
+      <DependentUpon>ShowBudgetChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Creation de projet\TachesProjet.resx">
+      <DependentUpon>TachesProjet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile\MesInfos.resx">
+      <DependentUpon>MesInfos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile\MesTaches.resx">
+      <DependentUpon>MesTaches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile\MyProfile.resx">
+      <DependentUpon>MyProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Tableau de bord\EspaceProjet.resx">
+      <DependentUpon>EspaceProjet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tableau de bord\EtatProjet.resx">
+      <DependentUpon>EtatProjet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tableau de bord\FicheProjet.resx">
+      <DependentUpon>FicheProjet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tableau de bord\TableauBord.resx">
+      <DependentUpon>TableauBord.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="RlzDs.xsc">
+      <DependentUpon>RlzDs.xsd</DependentUpon>
+    </None>
+    <None Include="RlzDs.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RlzDs.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RlzDs.xss">
+      <DependentUpon>RlzDs.xsd</DependentUpon>
+    </None>
+    <None Include="StartConfig\RlzDsFull.xsc">
+      <DependentUpon>RlzDsFull.xsd</DependentUpon>
+    </None>
+    <None Include="StartConfig\RlzDsFull.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RlzDsFull.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StartConfig\RlzDsFull.xss">
+      <DependentUpon>RlzDsFull.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clients-groupe-utilisateurs-icone-4112-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-icone-9437-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clients-contacts-clients-usercard-icone-7853-481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fermer-icone-3746-481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verrouillage-icone-4037-481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accueil-icone-6603-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accueil-icone-6603-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accueille.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajouter-icone-5107-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajouter-icone-5107-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\augmenter-icone-9349-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\augmenter-icone-9349-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendrier-icone-7855-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendrier-icone-7855-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carte-icone-8223-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clients-contacts-clients-usercard-icone-7853-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clients-contacts-clients-usercard-icone-7853-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clients-groupe-utilisateurs-icone-4112-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diagramme-icone-6234-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diagramme-icone-6234-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diagramme-icone-6234-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diagramme-icone-6234-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dossier-icone-3857-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dossier-icone-3857-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dossier-icone-4706-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dossier-icone-4706-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fermer-icone-3746-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fermer-icone-3776-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gens-icone-8612-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-home-page-onebit-icone-8207-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loupe-icone-4171-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pavillon-icone-8720-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pavillon-icone-8720-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultset-precedente-icone-8048-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultset-prochaine-icone-3787-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\simulateur-icone-7870-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\simulateur-icone-7870-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tableau-icone-6011-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tableau-icone-6011-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-icone-5572-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-icone-5572-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verrouillage-icone-4037-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verrouillage-icone-4037-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clients-groupe-utilisateurs-icone-4112-48 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\footer_design.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.cell.align.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.cell.align1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.base.select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.image.hdr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.calendar.day.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.user.tie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.section.expand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.clipboard.variant.edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.clipboard.variant.edit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.tag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.graph.line.up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.group.add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fermer-icone-3776-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-icone-5572-481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.interface.password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\err.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.email.hardedge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.page.edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.notification.multiple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.page.edit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.email.minimal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.notification.star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.clear.reflect.horizontal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.app.minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\423653.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\460014.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pavillon-icone-8720-321.png" />
+    <None Include="Resources\appbar.page.edit2.png" />
+    <None Include="Resources\appbar.notification.star1.png" />
+    <None Include="Resources\appbar.email.hardedge1.png" />
+    <None Include="Resources\appbar.page.edit3.png" />
+    <None Include="Resources\appbar.home.variant.png" />
+    <None Include="Resources\appbar.align.justify.png" />
+    <None Include="Resources\oky.ico" />
+    <None Include="Resources\bgback.jpg" />
+    <None Include="Resources\bgbacky.jpg" />
+    <None Include="Resources\bgbackx.png" />
+    <None Include="Resources\bgbackz.png" />
+    <None Include="Resources\bgbackx1.png" />
+    <None Include="Resources\appbar.align.justify1.png" />
+    <None Include="Resources\infosx.png" />
+    <None Include="Resources\mailx.png" />
+    <None Include="Resources\Menux.png" />
+    <None Include="Resources\tasksx.png" />
+    <Content Include="StartConfig\RlzProject_log.LDF">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>RlzProject.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\ONEP_logo.png" />
+    <Content Include="StartConfig\RlzProject.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
